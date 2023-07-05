@@ -23,7 +23,7 @@
         <div class="header-content">
             <img src="assets/imgs/gif/bunga.gif" id="fotostiker" style="display: inline-flex; opacity: 1; transform: scale(1); width: 40%;">
             <h1 class="header-title" id="isiTitle">Good Morning Sayang</h1>
-            <p class="header-subtitle"></p>
+            <p class="header-subtitle" id="isiText"></p>
 
             <!-- <button class="btn btn-theme-color modal-toggle"><i class="ti-control-play text-danger"></i> Watch Video</button> -->
 
@@ -44,16 +44,41 @@
         </div>          
     </div><!-- end of modal -->
 
-    
-    <!-- core  -->
-    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
-    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
-
-    <!-- bootstrap affix -->
-    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
-
     <!-- Dorang js -->
-    <script src="assets/js/dorang.js"></script>
+    <script> 
+    const d = new Date();
+    let hour = d.getHours();
+    let title = 'Hallo';
+    let isi = '';
+    if(hour >= 0){
+        title = 'Pagi Amat Tidur Lagi Gih';
+    }
+    if(hour >= 5){
+        title = 'Good Morning Sayang';
+        isi = 'Masih pagi kali sih ini tapi pas buat sholat subuh ';
+    }
+    if(hour >= 6){
+        title = 'Good Morning Sayang';
+        isi = 'Rajin juga jam segini bangun mau ngurus majikan kah ?';
+    }
+    if(hour > 12 && hour < 14){
+        title = 'Makan Siang Woi Malah Buka ini';
+        isi = 'Makan oi kangen nanti aja';
+    }
+    if(hour > 13){
+        title = 'Good Afternoon';
+        isi = 'jangan lupa istirahat sayang';
+    }
+    if(hour > 18){
+        title = 'Good Night';
+        isi = 'Jangan drakoran sampai ketiduran woi';
+    }
+
+    const isiText = document.getElementById("isiText");
+    const titleText = document.getElementById("isiTitle");
+    titleText.textContent = title;
+    isiText.textContent = isi;
+    </script>
 
 </body>
 </html>
