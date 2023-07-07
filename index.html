@@ -50,7 +50,7 @@
     let hour = d.getHours();
     let title = 'Hallo';
     let isi = '';
-    if(hour >= 0){
+    if(hour > 2){
         title = 'Pagi Amat Tidur Lagi Gih';
     }
     if(hour >= 5){
@@ -73,11 +73,11 @@
         title = 'Good Morning Sayang';
         isi = '';
     }
-    if(hour > 12 && hour < 14){
+    if(hour >= 12 && hour < 14){
         title = 'Makan Siang Woi Malah Buka ini';
         isi = 'Makan oi kangen nanti aja';
     }
-    if(hour > 13){
+    if(hour >= 14){
         title = 'Good Afternoon';
         isi = 'jangan lupa istirahat sayang';
     }
